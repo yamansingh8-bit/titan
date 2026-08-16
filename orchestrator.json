@@ -1,0 +1,111 @@
+{
+  "project": "AUTOCRYPT V4 - NEW PROJECT",
+  "version": "1.0",
+  "date": "2026-08-16",
+  "doctrine": "CORRECTNESS > REPRODUCIBILITY > SAFETY > ROBUSTNESS > PERFORMANCE > SPEED",
+  "trading_authority": "RISK > STRATEGY > MODEL/LLM",
+  "hard_project_goals": {
+    "OOS_Sharpe": ">= 1.50",
+    "average_trades_per_day": ">= 4.00",
+    "max_drawdown": "<= 20.00%"
+  },
+  "optimization_objective": "MINIMIZE MAX DD among candidates satisfying hard gates",
+  "secondary_preferences": [
+    "higher OOS Sharpe",
+    "higher Sortino",
+    "better expectancy",
+    "better cost robustness",
+    "better WFO stability",
+    "better coin robustness",
+    "better regime robustness"
+  ],
+  "orchestrator": {
+    "goal": "BUILD, REPAIR, TEST, RESEARCH, AUDIT, IMPROVE, DOCUMENT, AND HARDEN THE AUTOCRYPT PROJECT FROM ITS CURRENT STATE TOWARD VERIFIED 100% COMPLETION",
+    "agents": {
+      "engineering_architect": {
+        "role": "Python, architecture, debugging, testing, systems, Git, deployment, performance, Colab integration",
+        "disciplines": ["Python", "Computer Science", "Data Structures & Algorithms", "Git and GitHub", "API Design", "Backend", "Software Architect", "Software Design and Architecture", "System Design", "Linux", "Bash/Shell", "Docker", "DevOps", "DevSecOps", "QA", "performance"]
+      },
+      "quant_ml_researcher": {
+        "role": "ML, time series, Kronos, forecasting, features, labels, alpha research, WFO, OOS, bootstrap, Monte Carlo, self-training, model evaluation",
+        "disciplines": ["Machine Learning", "MLOps", "AI Engineer", "Python for Data Analysis", "Computer Science", "AI Agents", "Prompt Engineering", "AI Red Teaming"]
+      },
+      "red_team_risk_auditor": {
+        "role": "leakage, overfitting, backtest audit, risk, security, execution realism, adversarial testing, failure analysis",
+        "disciplines": ["Cyber Security", "DevSecOps", "AI Red Teaming", "Cyber Security"]
+      }
+    },
+    "task_graph": {
+      "critical_path": "DISCOVERY → FOUNDATION → DATA → TRADING ENGINE → BACKTESTER → V0 → BASELINES → KRONOS VALIDATION → ML → SELF-TRAINING → WFO / OOS / ROBUSTNESS → PAPER → SHADOW → TESTNET → HUMAN GATE → TINY LIVE → STABILITY → SCALE",
+      "parallel_tracks": ["security", "observability", "documentation", "agent control plane"],
+      "dependencies": {
+        "DISCOVERY": [],
+        "FOUNDATION": ["DISCOVERY"],
+        "DATA": ["FOUNDATION"],
+        "TRADING_ENGINE": ["DATA"],
+        "BACKTESTER": ["TRADING_ENGINE"],
+        "V0": ["BACKTESTER"],
+        "BASELINES": ["V0"],
+        "KRONOS_VALIDATION": ["BASELINES"],
+        "ML": ["KRONOS_VALIDATION"],
+        "SELF-TRAINING": ["ML"],
+        "WFO_ROBUSTNESS": ["SELF-TRAINING"],
+        "PAPER": ["WFO_ROBUSTNESS"],
+        "SHADOW": ["PAPER"],
+        "TESTNET": ["SHADOW"],
+        "HUMAN_GATE": ["TESTNET"],
+        "TINY_LIVE": ["HUMAN_GATE"],
+        "STABILITY": ["TINY_LIVE"],
+        "SCALE": ["STABILITY"]
+      }
+    },
+    "permissions": {
+      "agent_layer": "cannot override RiskBrain",
+      "colab": "heavy tasks on Colab, light local",
+      "git": "protected main, agent feature branches, research branches, audit branches, model tags, dataset tags",
+      "resources": "full authorization to use all legitimately available resources: plugins, skills, connected tools, Git tools, file tools, web/research tools, AI models, model APIs, Google Colab, GPU, CPU, storage, scripts, notebooks, datasets, models, artifacts",
+      "human_approval_gates": "real-money orders require human go-ahead; RiskBrain > Strategy > Model"
+    },
+    "memory": {
+      "persistent": "PROJECT_MEMORY.md index, per-fact files with frontmatter (name/description/metadata type)",
+      "index": "PROJECT_MEMORY.md one-line pointers (- [Title](file.md) — hook), no frontmatter in index",
+      "format": "each fact: individual file with frontmatter (name: short-kebab-case-slug, description: one-line summary, metadata: user|feedback|project|reference), body with Why: and How to apply: lines, [[name]] linking"
+    },
+    "experiments": {
+      "versioning": "KRN-V0, KRN-V1, ... for models; RUN-0001, RUN-0002, ... for experiments",
+      "registry": "experiment registry with model ID, hash, parent model, dataset, code commit, training config, environment, metrics, promotion decision",
+      "lifecycle": "DRAFT → TRAINED → CANDIDATE → VALIDATED → CHAMPION → PAPER → SHADOW → TINY LIVE"
+    },
+    "colab": {
+      "heavy_tasks": "training, fine-tuning, large backtests, WFO, bootstrap, Monte Carlo, hyperparameter sweeps, large dataset generation, model export",
+      "package": "README.md, notebook.ipynb, requirements.txt, config, expected outputs, checksums",
+      "human_workflow": "upload/run → return results → agents continue autonomously after ingestion"
+    },
+    "budgets": "token budgets, compute budgets, Colab resource budgets enforced per task tier",
+    "completion": {
+      "100_percent": "requirements satisfied, tests pass, research gates pass, artifacts reproducible, risk verified, execution verified, agent system stable, documentation complete, no critical blocker remains",
+      "does_not_mean": "future profit is guaranteed"
+    },
+    "human_approval": "TINY LIVE gate requires: OOS Sharpe ≥ 1.50, trades/day ≥ 4, Max DD ≤ 20%, WFO, bootstrap, Monte Carlo, cost stress, paper, shadow, testnet, risk tests, watchdog, human approval",
+    "red_team": "Agent C continuously tries to break: code, backtester, model, agent prompts, routing, promotion, security, risk",
+    "adaptive_routing": "specialists selected dynamically from 10-mode hierarchy: architecture, deep-research, heavy-coding, autonomous-coding, fast-coding, latency-critical, huge-context, adversarial-review, production, fallback"
+  },
+  "resource_authorization": "Full approval to use all legitimately available resources needed to complete AUTOCRYPT. Choose resources using: correctness, quality of evidence, reliability, resource efficiency. Does not override platform rules, tool permissions, credential security, or human-only real-money approval.",
+  "source_basis": "Roadmap uses nilbuild/developer-roadmap repository as external taxonomy, mapped into AUTOCRYPT project architecture, evolved-Kronos/self-training plan, multi-agent design, and source-first operating protocol.",
+  "golden_rule": "Learn only what improves the project. Build only what the project can verify. Promote only what survives independent evaluation.",
+  "phase_0": {
+    "objective": "Make the entire existing project understandable before major changes begin.",
+    "tasks": ["repository inventory", "source inventory", "entrypoint inventory", "model inventory", "data inventory", "notebook inventory", "dependency inventory", "test inventory", "experiment inventory", "documentation inventory"],
+    "create": ["PROJECT_DISCOVERY_REPORT.md", "PROJECT_HEALTH_REPORT.md", "PROJECT_COMPLETION_MATRIX.md"],
+    "agent_a": "Audit: code, architecture, dependencies, runtime, Git, entrypoints",
+    "agent_b": "Audit: data, features, Kronos, ML, backtester, experiments",
+    "agent_c": "Audit: security, leakage, risk, unsafe assumptions, missing tests",
+    "exit_gate": "[ ] all major files identified, all major systems identified, broken areas identified, missing pieces identified, P0/P1/P2/P3 priorities assigned"
+  },
+  "phase_1": {
+    "roadmap_basis": "Python Roadmap",
+    "required_topics": ["functions", "classes", "dataclasses", "typing", "modules", "packages", "exceptions", "logging", "configuration", "iterators", "generators", "context managers", "asyncio", "concurrency", "multiprocessing", "profiling", "performance", "testing"],
+    "autocrypt_application": "Create clean boundaries: config/, data/, features/, brains/, models/, research/, execution/, risk/, agents/, orchestration/, tests/",
+    "exit_gate": "[ ] core modules independently testable, deterministic config, structured errors, useful logs, no unnecessary import coupling"
+  }
+}
