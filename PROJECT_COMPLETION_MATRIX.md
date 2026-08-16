@@ -22,7 +22,7 @@ Each row represents a roadmap phase. Columns track:
 
 | Phase | Title | Status | Exit Gate | Owner | Notes |
 |---|---|---|---|---|---|
-| **0** | Project Discovery | 🟡 IN_PROGRESS | all major files identified, systems identified, broken areas identified, missing pieces identified, P0/P1/P2/P3 priorities assigned | System | This report; Git init; orchestrator JSON created; 3-agent team defined |
+| **0** | Project Discovery | ✅ COMPLETE | all major files identified, systems identified, broken areas identified, missing pieces identified, P0/P1/P2/P3 priorities assigned | System | This report; Git init; orchestrator JSON created; 3-agent team defined |
 | **1** | Python Engineering | ❌ NOT_STARTED | core modules independently testable, deterministic config, structured errors, useful logs, no unnecessary import coupling | Engineering Architect | Clean boundaries: config/, data/, features/, brains/, models/, research/, execution/, risk/, agents/, orchestration/, tests/ |
 | **2** | Computer Science + Algorithms | ❌ NOT_STARTED | CS concepts mastered (complexity, hash maps, sets, queues, heaps, trees, graphs, sorting, search, caching, state machines, serialization); orchestrator can represent GOAL → TASK GRAPH → DEPENDENCIES → EXECUTION STATE → RETRY → COMPLETE | Engineering Architect | CS + Algorithms roadmap basis |
 | **3** | Git / GitHub | ❌ NOT_STARTED | protected main, agent feature branches, research branches, audit branches, model tags, dataset tags; branch → change → test → commit → review → merge workflow; version models (KRN-V0, KRN-V1, ...); version experiments (RUN-0001, RUN-0002, ...) | Engineering Architect | Git repo to be initialized |
